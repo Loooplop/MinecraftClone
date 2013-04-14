@@ -230,11 +230,11 @@ inline int IsInsideSquare(float PlayerPosX,float PlayerPosY,float PlayerPosZ,flo
 inline int IsPlayerInsideSquare(Player Human,float xMin,float xMax,float yMin,float yMax, float zMin,float zMax)
 {
 	int a;
-	if(Human.Coordinates.CoordinateX <=xMax && Human.Coordinates.CoordinateX >=xMin)
+	if(Human.Coordinates.CoordinateX < xMax && Human.Coordinates.CoordinateX >xMin)
 	{
-	     if(Human.Coordinates.CoordinateY <= yMax && Human.Coordinates.CoordinateY >= yMin)
+	     if(Human.Coordinates.CoordinateY < yMax && Human.Coordinates.CoordinateY > yMin)
 	     {
-	        if(Human.Coordinates.CoordinateZ <=zMax && Human.Coordinates.CoordinateZ >=zMin)
+	        if(Human.Coordinates.CoordinateZ <= zMax && Human.Coordinates.CoordinateZ >=zMin)
 	            {
                     return 4;
                 };

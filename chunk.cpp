@@ -40,27 +40,19 @@ void Chunk::Optimization(Player &Human)
      	{
 		    for(int y=0;y<CHUNK_SIZE;y++)
 		    {
-	            if(IsPlayerInsideSquare(Human,(x*Block)-2.0f,(x*Block)+2.0f,(y*Block)-2.0f,(y*Block)+2.0f,(z*Block)-2.0f,(z*Block)+2.0f)==4)
+	            if(IsPlayerInsideSquare(Human,(x*Block)-2.0f,(x*Block)+2.0f,(y*Block)-2.0f,(y*Block)+2.0f,(z*Block)-1.0f,(z*Block)+3.0f)==4)
 	            {
-	            	if(CnkDta[x][y][z].BeRendered==true)
-	            	{
-	            		cout<<"This Block is Solid"<<endl;
-	            	};
-					if(CnkDta[x][y][z].BeRendered==false)
-	            	{
-	            		cout<<"This Block is Not Solid"<<endl;
-	            	};
-	            	Human.CurrentBlock.AddDefault(x,y,z);
+	            	Human.CurrentBlock.Vertice::AddDefault(x,y,z);
 	            	break;
 	            };
-	            
+
             };
         };
      };
     }
     else
 	{
-    	cout<<"Outside Chunk"<<endl;
+    	Human.CurrentBlock.Vertice::AddDefault(-20.0f,-20.0f,-20.0f);
     };
 }
 void Chunk::RenderChunk(float Chunkx,float Chunky,float Chunkz,GLuint A,Player Play)

@@ -15,6 +15,13 @@ class Player
 		Vertice Coordinates;
 		float xrot,yrot,zrot;
 		Vertice CurrentBlock;
+		void Apply_Gravity();
+		float GetPosX();
+		float GetPosY();
+		float GetPosZ();
+		float GetCuBckX();
+		float GetCuBckY();
+		float GetCuBckZ();
 };
 
 #endif // CAMERA_H

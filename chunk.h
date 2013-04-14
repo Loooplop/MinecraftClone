@@ -4,7 +4,7 @@
 #include <math.h>
 #include "block.h"
 #include "Player.h"
-#define CHUNK_SIZE 10
+#define CHUNK_SIZE 12
 /*
  * No description
  */
@@ -19,7 +19,7 @@ class Chunk
 		void RenderChunk(float x,float y,float z,GLuint a,Player Play);
 		void Setup_Sphere();
 		void Optimization(Player &Human);
-	protected:
+	//protected:
 		Block CnkDta[CHUNK_SIZE][CHUNK_SIZE][CHUNK_SIZE];
 		float Height[CHUNK_SIZE][CHUNK_SIZE];
 };
